@@ -3,5 +3,9 @@ docker run -it --rm \
     nvim:latest /bin/zsh
 
 
+docker run -it --rm \
+    -v $HOME/Documents/Development:/Development \
+    bobpandaone/nvim-in-docker:main /bin/zsh
 
-ghcr.io/axelzublena/nvim-in-docker:latest
+
+bobpandaone/nvim-in-docker:main
