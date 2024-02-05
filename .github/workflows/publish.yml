@@ -19,6 +19,6 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build Docker image
       run: |
-         docker build . --tag ghcr.io/AxelZublena/nvim-in-docker:latest
-         docker run ghcr.io/AxelZublena/nvim-in-docker:latest
-         docker push ghcr.io/AxelZublena/nvim-in-docker:latest
+         docker build . --tag ghcr.io/axelzublena/nvim-in-docker:latest
+         docker run ghcr.io/axelzublena/nvim-in-docker:latest
+         docker push ghcr.io/axelzublena/nvim-in-docker:latest
