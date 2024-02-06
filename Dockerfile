@@ -21,6 +21,10 @@ RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 COPY --chown=archlinux .zshrc /home/archlinux/.zshrc
 COPY --chown=archlinux nvim /home/archlinux/.config/nvim
 
+RUN npm install -g tree-sitter tree-sitter-cli
+
 RUN nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 RUN nvim --headless -c 'TSInstall python typescript javascript svelte c rust html lua quitall'
+
+ENTRYPOINT ["nvim"]
