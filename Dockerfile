@@ -22,3 +22,5 @@ COPY --chown=archlinux .zshrc /home/archlinux/.zshrc
 COPY --chown=archlinux nvim /home/archlinux/.config/nvim
 
 RUN nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
+RUN nvim --headless -c 'TSInstall python typescript javascript svelte c rust html lua quitall'
