@@ -24,6 +24,8 @@ COPY --chown=archlinux nvim /home/archlinux/.config/nvim
 
 RUN nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
+EXPOSE 80
+EXPOSE 443
 #RUN nvim --headless -c 'TSInstall python typescript javascript svelte c rust html lua quitall'
 
-ENTRYPOINT ["nvim"]
+#ENTRYPOINT ["nvim"]
